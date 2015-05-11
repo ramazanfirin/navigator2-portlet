@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.mobilekipyonetim.service">
+	<author>002834</author>
+	<namespace>mobilekipyonetim</namespace>
+
+	<entity name="Branch" local-service="true" remote-service="false" table="brach" >
+
+		<!-- PK fields -->
+
+		<column name="entityId" type="int" primary="true" id-type="increment"/>
+
+		<!-- Group instance -->
+
+		
+
+		<!-- Audit fields -->
+        <column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+		<column name="lat" type="int" />
+		<column name="lng" type="int" />
+		<column name="organizationId" type="long" />
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+
+		<!-- Finder methods -->
+
+<!-- 		<finder name="Organization" return-type="Collection"> -->
+<!-- 			<finder-column name="organizationId" /> -->
+<!-- 		</finder> -->
+		
+		
+		<finder name="NameAndOrganization" return-type="Collection" >
+			<finder-column name="name" comparator="LIKE"/>
+			<finder-column name="organizationId"  />
+		</finder>
+	</entity>
+	
+	
+		<entity name="Device" local-service="true" remote-service="false" table="device" >
+
+		<!-- PK fields -->
+
+		<column name="entityId" type="int" primary="true" id-type="increment"/>
+
+		<!-- Group instance -->
+
+		
+
+		<!-- Audit fields -->
+        <column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="msisdn" type="String" />
+		<column name="imei" type="String" />
+		<column name="regId" type="String" />
+		<column name="organizationId" type="long" />
+		<!-- Order -->
+
+<!-- 		<column name="vehicle" type="Collection" entity="Vehicle" mapping-table="Vehicle"/> -->
+
+		<order by="asc">
+			<order-column name="imei" />
+		</order>
+
+		<!-- Finder methods -->
+
+<!-- 		<finder name="Organization" return-type="Collection"> -->
+<!-- 			<finder-column name="organizationId" /> -->
+<!-- 		</finder> -->
+		
+		
+		<finder name="imeiAndOrganization" return-type="Collection" >
+			<finder-column name="imei" comparator="LIKE"/>
+			<finder-column name="organizationId"  />
+			
+		</finder>
+		
+		<finder name="organization" return-type="Collection" >
+			<finder-column name="organizationId"  />
+		</finder>
+	</entity>
+	
+	
+	
+	<entity name="Vehicle" local-service="true" remote-service="false" table="Vehicle" >
+
+		<!-- PK fields -->
+
+		<column name="vehicleEntityId" type="int" primary="true" id-type="increment"/>
+
+		<!-- Group instance -->
+
+		
+
+		<!-- Audit fields -->
+        <column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="plate" type="String" />
+		<column name="organizationId" type="long" />
+		<column name="deviceId" type="long" />
+		
+<!-- 		<column name="device" type="Collection" entity="Device" mapping-table="device"/> -->
+	
+		<!-- Order -->
+
+
+		<order by="asc">
+			<order-column name="plate" />
+		</order>
+
+		<!-- Finder methods -->
+
+<!-- 		<finder name="Organization" return-type="Collection"> -->
+<!-- 			<finder-column name="organizationId" /> -->
+<!-- 		</finder> -->
+		
+		
+		<finder name="plateAndOrganization" return-type="Collection" >
+			<finder-column name="plate" comparator="LIKE"/>
+			<finder-column name="organizationId"  />
+		</finder>
+		
+		<finder name="organization" return-type="Collection" >
+			<finder-column name="organizationId"  />
+		</finder>
+		
+		<finder name="organizationList" return-type="Collection" >
+			<finder-column name="organizationId" arrayable-operator="OR" comparator="=" />
+		</finder>
+		
+		<finder name="plateAndOrganizationList" return-type="Collection" >
+		<finder-column name="plate" comparator="LIKE"/>
+			<finder-column name="organizationId" arrayable-operator="OR" comparator="=" />
+		</finder>
+		
+	</entity>
+	
+	<entity name="Order" local-service="true" remote-service="false" table="Order" >
+
+		<!-- PK fields -->
+
+		<column name="orderEntityId" type="int" primary="true" id-type="increment"/>
+
+		<!-- Group instance -->
+
+		
+
+		<!-- Audit fields -->
+        <column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="organizationId" type="long" />
+		<!-- Other fields -->
+		<column name="lat" type="String" />
+		<column name="lng" type="String" />
+		<column name="date" type="Date" />
+		<column name="address" type="String" />
+		<column name="ilce" type="String" />
+		<column name="mahalle" type="String" />
+		<column name="sokak" type="String" />
+		<column name="bina" type="String" />
+
+		<column name="vehicleId" type="long" />
+		<column name="statusId" type="long" />
+		<column name="priorityId" type="long" />
+		
+		<order by="asc">
+			<order-column name="date" />
+		</order>
+
+<!-- 		<finder name="dateAndOrganization" return-type="Collection" > -->
+<!-- 			<finder-column name="date" comparator="LIKE"/> -->
+<!-- 			<finder-column name="organizationId"  /> -->
+<!-- 		</finder> -->
+		
+		<finder name="organization" return-type="Collection" >
+			<finder-column name="organizationId"  />
+		</finder>
+		
+		<finder name="organizationList" return-type="Collection" >
+			<finder-column name="organizationId" arrayable-operator="OR" comparator="=" />
+		</finder>
+		
+		<finder name="vehicle" return-type="Vehicle" >
+			<finder-column name="vehicleId"  />
+		</finder>
+		
+		
+<!-- 		<finder name="dateAndOrganizationList" return-type="Collection" > -->
+<!-- 		<finder-column name="plate" comparator="LIKE"/> -->
+<!-- 			<finder-column name="organizationId" arrayable-operator="OR" comparator="=" /> -->
+<!-- 		</finder> -->
+		
+	</entity>
+	
+	<entity name="OrderPriority" local-service="true" remote-service="false" table="OrderPriority" >
+
+		<!-- PK fields -->
+
+		<column name="orderPriorityEntityId" type="int" primary="true" id-type="increment"/>
+
+		<!-- Group instance -->
+
+		
+
+		<!-- Audit fields -->
+        <column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="organizationId" type="long" />
+		<!-- Other fields -->
+		
+		<column name="description" type="String" />
+	
+		</entity>
+		
+		
+		
+		<entity name="Poi" local-service="true" remote-service="false" table="Poi" >
+
+		<!-- PK fields -->
+
+		<column name="poiEntityId" type="int" primary="true" id-type="increment"/>
+
+		<!-- Group instance -->
+
+		
+
+		<!-- Audit fields -->
+        <column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="organizationId" type="long" />
+		<!-- Other fields -->
+		
+		<column name="name" type="String"></column>
+	<column name="lat"  type="String"></column>
+	<column name="lng"  type="String"></column>
+	
+	<finder name="nameAndOrganizationId" return-type="Collection" >
+			<finder-column name="name" comparator="LIKE"/>
+			<finder-column name="organizationId" />
+	</finder>
+	
+	<finder name="organizationId" return-type="Collection" >
+			<finder-column name="organizationId"/>
+	</finder>
+	
+	<finder name="organizationIdList" return-type="Collection" >
+			<finder-column name="organizationId" arrayable-operator="OR" comparator="="/>
+	</finder>
+	
+	
+		</entity>
+		
+		
+</service-builder>

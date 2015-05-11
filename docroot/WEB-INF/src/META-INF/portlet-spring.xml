@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.mobilekipyonetim.service.service.BranchLocalService" class="com.mobilekipyonetim.service.service.impl.BranchLocalServiceImpl" />
+	<bean id="com.mobilekipyonetim.service.service.persistence.BranchPersistence" class="com.mobilekipyonetim.service.service.persistence.BranchPersistenceImpl" parent="basePersistence" />
+	<bean id="com.mobilekipyonetim.service.service.DeviceLocalService" class="com.mobilekipyonetim.service.service.impl.DeviceLocalServiceImpl" />
+	<bean id="com.mobilekipyonetim.service.service.persistence.DevicePersistence" class="com.mobilekipyonetim.service.service.persistence.DevicePersistenceImpl" parent="basePersistence" />
+	<bean id="com.mobilekipyonetim.service.service.OrderLocalService" class="com.mobilekipyonetim.service.service.impl.OrderLocalServiceImpl" />
+	<bean id="com.mobilekipyonetim.service.service.persistence.OrderPersistence" class="com.mobilekipyonetim.service.service.persistence.OrderPersistenceImpl" parent="basePersistence" />
+	<bean id="com.mobilekipyonetim.service.service.OrderPriorityLocalService" class="com.mobilekipyonetim.service.service.impl.OrderPriorityLocalServiceImpl" />
+	<bean id="com.mobilekipyonetim.service.service.persistence.OrderPriorityPersistence" class="com.mobilekipyonetim.service.service.persistence.OrderPriorityPersistenceImpl" parent="basePersistence" />
+	<bean id="com.mobilekipyonetim.service.service.PoiLocalService" class="com.mobilekipyonetim.service.service.impl.PoiLocalServiceImpl" />
+	<bean id="com.mobilekipyonetim.service.service.persistence.PoiPersistence" class="com.mobilekipyonetim.service.service.persistence.PoiPersistenceImpl" parent="basePersistence" />
+	<bean id="com.mobilekipyonetim.service.service.VehicleLocalService" class="com.mobilekipyonetim.service.service.impl.VehicleLocalServiceImpl" />
+	<bean id="com.mobilekipyonetim.service.service.persistence.VehiclePersistence" class="com.mobilekipyonetim.service.service.persistence.VehiclePersistenceImpl" parent="basePersistence" />
+</beans>

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.mobilekipyonetim.service.model.Branch">
+		<field name="entityId" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="lat" type="int" />
+		<field name="lng" type="int" />
+		<field name="organizationId" type="long" />
+	</model>
+	<model name="com.mobilekipyonetim.service.model.Device">
+		<field name="entityId" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="msisdn" type="String" />
+		<field name="imei" type="String" />
+		<field name="regId" type="String" />
+		<field name="organizationId" type="long" />
+	</model>
+	<model name="com.mobilekipyonetim.service.model.Order">
+		<field name="orderEntityId" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="organizationId" type="long" />
+		<field name="lat" type="String" />
+		<field name="lng" type="String" />
+		<field name="date" type="Date" />
+		<field name="address" type="String" />
+		<field name="ilce" type="String" />
+		<field name="mahalle" type="String" />
+		<field name="sokak" type="String" />
+		<field name="bina" type="String" />
+		<field name="vehicleId" type="long" />
+		<field name="statusId" type="long" />
+		<field name="priorityId" type="long" />
+	</model>
+	<model name="com.mobilekipyonetim.service.model.OrderPriority">
+		<field name="orderPriorityEntityId" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="organizationId" type="long" />
+		<field name="description" type="String" />
+	</model>
+	<model name="com.mobilekipyonetim.service.model.Poi">
+		<field name="poiEntityId" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="organizationId" type="long" />
+		<field name="name" type="String" />
+		<field name="lat" type="String" />
+		<field name="lng" type="String" />
+	</model>
+	<model name="com.mobilekipyonetim.service.model.Vehicle">
+		<field name="vehicleEntityId" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="plate" type="String" />
+		<field name="organizationId" type="long" />
+		<field name="deviceId" type="long" />
+	</model>
+</model-hints>
