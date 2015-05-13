@@ -15,9 +15,11 @@
 		<dependency name="liferay-faces-bridge-impl" org="com.liferay.faces" rev="3.2.4-ga5" />
 		<dependency name="liferay-faces-portal" org="com.liferay.faces" rev="3.2.4-ga5" />
 		<dependency name="liferay-faces-util" org="com.liferay.faces" rev="3.2.4-ga5" />
-		<dependency name="primefaces" org="org.primefaces" rev="5.1" />
+
 		<dependency name="jsoup" org="org.jsoup" rev="1.7.2" />
 		<dependency name="httpclient" org="org.apache.httpcomponents" rev="4.3.5" />
 		<dependency name="geocoder-java" org="com.google.code.geocoder-java" rev="0.16" />
+		<dependency name="afterdark" org="org.primefaces.themes" rev="1.0.10" />
+
 	</dependencies>
 </ivy-module>

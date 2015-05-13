@@ -9,6 +9,7 @@
 	xmlns:p="http://primefaces.org/ui"
 >
 <h:head>
+<!-- <link href="#{request.contextPath}/css/aristo.css" rel="stylesheet" type="text/css"></link>  -->
 <h:outputStylesheet value="/css/aristo.css"></h:outputStylesheet> 
 </h:head>
 <h:body>
@@ -37,7 +38,7 @@
 						<h:outputLabel value="Şube"></h:outputLabel>
 						<h:outputLabel value=":"></h:outputLabel>
 						
-						<p:selectOneMenu id="suburbs3" value="#{deviceController.subOrganizationId}">
+						<p:selectOneMenu id="suburbs3" value="#{deviceController.subOrganizationId}" >
 							<p:ajax listener="#{deviceController.onSubOrganizationChange}" />
 							<f:selectItems value="#{deviceController.subOrganizationList}" />
 						</p:selectOneMenu>

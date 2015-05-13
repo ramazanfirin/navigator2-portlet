@@ -191,14 +191,14 @@
 <h:form id="formMap">
 
 <p:gmap id="map" center="38.72956137445706, 35.47995459062804" zoom="14" fitBounds="true" 
-					type="HYBRID" style="width:950px;height:650px;margin-left:5px"
+					type="HYBRID" style="width:1150px;height:650px;margin-left:5px"
 					model="#{navigator2.emptyModel}"
 					onPointClick="handlePointClick2(event);"
 					binding="#{navigator2.map}"
 					widgetVar="map">
 					<p:ajax event="overlaySelect" oncomplete="PF('sendDialog').show()"
 						listener="#{navigator2.onMarkerSelect}"  update=":sendDialogForm:datatable" /> >
-				
+				        
 							</p:gmap>
 
 </h:form>

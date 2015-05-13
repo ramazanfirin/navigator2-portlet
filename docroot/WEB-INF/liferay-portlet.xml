@@ -3,12 +3,45 @@
 
 <liferay-portlet-app>
 	<portlet>
-		<portlet-name>Navigator2-Portlet</portlet-name>
+		<portlet-name>Branch</portlet-name>
+		<icon>/icon.png</icon>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<ajaxable>false</ajaxable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<css-class-wrapper>Navigator-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>Device</portlet-name>
 		<icon>/icon.png</icon>
 		<requires-namespaced-parameters>false</requires-namespaced-parameters>
 		<ajaxable>false</ajaxable>
 		<header-portlet-css>/css/main.css</header-portlet-css>
 		<css-class-wrapper>Navigator2-Portlet-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>Vehicle</portlet-name>
+		<icon>/icon.png</icon>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<ajaxable>false</ajaxable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<css-class-wrapper>Navigator-portlet</css-class-wrapper>
+	</portlet>
+		<portlet>
+		<portlet-name>Navigator</portlet-name>
+		<icon>/icon.png</icon>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<ajaxable>false</ajaxable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<css-class-wrapper>Navigator-portlet</css-class-wrapper>
+		    
+	</portlet>
+	<portlet>
+		<portlet-name>Test</portlet-name>
+		<icon>/icon.png</icon>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<ajaxable>false</ajaxable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<css-class-wrapper>Navigator-portlet</css-class-wrapper>
 	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>
