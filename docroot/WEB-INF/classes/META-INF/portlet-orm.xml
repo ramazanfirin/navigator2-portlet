@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.mobilekipyonetim.service.model.impl.BranchModelImpl">
+		<attributes>
+			<id name="entityId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="name" />
+			<basic name="lat" />
+			<basic name="lng" />
+			<basic name="organizationId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.mobilekipyonetim.service.model.impl.DeviceModelImpl">
+		<attributes>
+			<id name="entityId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="msisdn" />
+			<basic name="imei" />
+			<basic name="regId" />
+			<basic name="organizationId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.mobilekipyonetim.service.model.impl.OrderModelImpl">
+		<attributes>
+			<id name="orderEntityId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="organizationId" />
+			<basic name="lat" />
+			<basic name="lng" />
+			<basic name="date">
+				<column name="DATE_" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="address" />
+			<basic name="ilce" />
+			<basic name="mahalle" />
+			<basic name="sokak" />
+			<basic name="bina" />
+			<basic name="vehicleId" />
+			<basic name="statusId" />
+			<basic name="priorityId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.mobilekipyonetim.service.model.impl.OrderPriorityModelImpl">
+		<attributes>
+			<id name="orderPriorityEntityId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="organizationId" />
+			<basic name="description" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.mobilekipyonetim.service.model.impl.PoiModelImpl">
+		<attributes>
+			<id name="poiEntityId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="organizationId" />
+			<basic name="name" />
+			<basic name="lat" />
+			<basic name="lng" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.mobilekipyonetim.service.model.impl.VehicleModelImpl">
+		<attributes>
+			<id name="vehicleEntityId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="plate" />
+			<basic name="organizationId" />
+			<basic name="deviceId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.mobilekipyonetim.service.model.impl.BranchImpl" name="Branch">
+		<table name="brach" />
+		<attributes />
+	</entity>
+	<entity class="com.mobilekipyonetim.service.model.impl.DeviceImpl" name="Device">
+		<table name="device" />
+		<attributes />
+	</entity>
+	<entity class="com.mobilekipyonetim.service.model.impl.OrderImpl" name="Order">
+		<table name="Order" />
+		<attributes />
+	</entity>
+	<entity class="com.mobilekipyonetim.service.model.impl.OrderPriorityImpl" name="OrderPriority">
+		<table name="OrderPriority" />
+		<attributes />
+	</entity>
+	<entity class="com.mobilekipyonetim.service.model.impl.PoiImpl" name="Poi">
+		<table name="Poi" />
+		<attributes />
+	</entity>
+	<entity class="com.mobilekipyonetim.service.model.impl.VehicleImpl" name="Vehicle">
+		<table name="Vehicle" />
+		<attributes />
+	</entity>
+</entity-mappings>
